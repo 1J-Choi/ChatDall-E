@@ -70,6 +70,10 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>net.dv8tion</groupId>
 			<artifactId>JDA</artifactId>
 			<version>5.0.0-alpha.22</version>
@@ -94,6 +98,15 @@
 			<groupId>com.google.cloud</groupId>
 			<artifactId>google-cloud-speech</artifactId>
 			<version>0.32.0-alpha</version>
+		</dependency>
+		<dependency>
+			<groupId>io.github.barqawiz</groupId>
+			<artifactId>intellijava.core</artifactId>
+			<version>0.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>nz.net.ultraq.thymeleaf</groupId>
+			<artifactId>thymeleaf-layout-dialect</artifactId>
 		</dependency>
 	</dependencies>
 

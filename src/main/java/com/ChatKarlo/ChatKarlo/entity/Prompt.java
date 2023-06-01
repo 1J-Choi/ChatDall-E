@@ -1,6 +1,8 @@
 package com.ChatKarlo.ChatKarlo.entity;
 
 import javax.persistence.*;
+
+import com.ChatKarlo.ChatKarlo.repository.MemberRepository;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.lang.Nullable;
@@ -16,18 +18,22 @@ public class Prompt {
     private Long id;
 
     // 입력받은 자연어 문장
-    @Nullable
     private String beforeWords;
 
-    // 추출된 제시어
-    @Nullable
+    // 번역 및 추출된 제시어
     private String afterWords;
 
-    // 생성된 사진의 Base64 인코딩
-    @Nullable
-    private String img;
+    // 생성된 이미지의 url
+    @Column(columnDefinition = "TEXT")
+    private String url;
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
+
+    public static Prompt createPrompt(Member member){
+        Prompt prompt = new Prompt();
+        prompt.setMember(member);
+        return prompt;
+    }
 }

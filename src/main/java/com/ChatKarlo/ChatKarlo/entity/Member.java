@@ -1,8 +1,10 @@
 package com.ChatKarlo.ChatKarlo.entity;
 
+import com.ChatKarlo.ChatKarlo.dto.MemberFormDto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 
@@ -22,5 +24,14 @@ public class Member {
 
     private String password;
 
-    private String nickname;
+    private String nick;
+
+    public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder){
+        Member member = new Member();
+        member.setEmail(memberFormDto.getEmail());
+        String password = passwordEncoder.encode(memberFormDto.getPassword());
+        member.setPassword(password);
+        member.setNick(memberFormDto.getNick());
+        return member;
+    }
 }
