@@ -32,3 +32,6 @@ IntelliJava GitHub : <https://github.com/Barqawiz/IntelliJava>
 ---------
 개발자를 위한 시스템 구조 및 안내사항은 Repository 내
 [READMEforDEV.md](READMEforDEV.md)를 통해 확인할 수 있습니다.
+
+개발 과정 및 로그를 작성한 일지 또한 Repository 내
+[report.md](report.md)를 통해 확인할 수 있습니다.
