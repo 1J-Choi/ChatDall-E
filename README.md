@@ -27,3 +27,8 @@ IntelliJava GitHub : <https://github.com/Barqawiz/IntelliJava>
 문장을 수정 및 다시 입력하여 새로운 이미지를 생성할 수 있습니다.
 
 (단 문장 수정 및 재입력 시 기존의 데이터는 사라지기 때문에 이미지를 저장한 뒤 진행해야합니다.)
+
+기타 사항
+---------
+개발자를 위한 시스템 구조 및 안내사항은 Repository 내
+[READMEforDEV.md](READMEforDEV.md)를 통해 확인할 수 있습니다.
